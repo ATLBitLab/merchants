@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { players } from "@/data/players";
 import { businesses } from "@/data/businesses";
 import {
@@ -20,21 +22,23 @@ export default function Home() {
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <header className="mb-8 text-center">
-          <div className="mb-4 flex items-center justify-center gap-4">
-            <span className="text-6xl">₿</span>
-            <h1 className="text-5xl font-bold text-black drop-shadow-lg md:text-6xl">
-              Bitcoin Onboarding Leaderboard
-            </h1>
-            <span className="text-6xl">₿</span>
+          <div className="mb-6 flex justify-center">
+            <Link href="https://atlbitlab.com" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/atl-bitlab.png"
+                alt="ATL BitLab"
+                width={200}
+                height={200}
+                className="hover:opacity-80 transition-opacity"
+              />
+            </Link>
           </div>
+          <h1 className="mb-4 text-5xl font-bold text-black drop-shadow-lg md:text-6xl" style={{ fontFamily: 'var(--font-freckle-face)' }}>
+            Bitcoin Onboarding Leaderboard
+          </h1>
           <p className="text-xl text-gray-800 md:text-2xl">
             Competing to onboard local small businesses to Bitcoin
           </p>
-          <div className="mt-4 flex justify-center gap-2 text-4xl">
-            <span>🚀</span>
-            <span>💪</span>
-            <span>🎉</span>
-          </div>
         </header>
 
         {/* Leaderboard Grid */}
