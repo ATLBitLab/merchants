@@ -7,6 +7,7 @@ import {
   getTopVisitors,
 } from "@/lib/leaderboard";
 import LeaderboardSection from "@/components/LeaderboardSection";
+import BusinessesTable from "@/components/BusinessesTable";
 
 export default function Home() {
   const topPlayers = getTopPlayers(players, businesses);
@@ -78,6 +79,9 @@ export default function Home() {
             description="Players who visited a local merchant to discuss bitcoin"
           />
         </div>
+
+        {/* Businesses Table */}
+        <BusinessesTable businesses={businesses} players={players} />
 
         {/* Footer */}
         <footer className="mt-12 text-center">
