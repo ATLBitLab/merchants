@@ -6,6 +6,7 @@ interface LeaderboardSectionProps {
   color: string;
   scores: PlayerScore[];
   emptyMessage: string;
+  description: string;
 }
 
 export default function LeaderboardSection({
@@ -14,6 +15,7 @@ export default function LeaderboardSection({
   color,
   scores,
   emptyMessage,
+  description,
 }: LeaderboardSectionProps) {
   const getRankEmoji = (rank: number) => {
     if (rank === 0) return "🥇";
@@ -24,10 +26,11 @@ export default function LeaderboardSection({
 
   return (
     <div className={`rounded-3xl p-6 shadow-lg ${color} border-4 border-black`}>
-      <div className="mb-4 flex items-center gap-3">
+      <div className="mb-3 flex items-center gap-3">
         <span className="text-4xl">{icon}</span>
         <h2 className="text-2xl font-bold text-black">{title}</h2>
       </div>
+      <p className="mb-4 text-sm font-medium text-gray-800">{description}</p>
 
       {scores.length === 0 ? (
         <div className="py-8 text-center">

@@ -45,6 +45,7 @@ export default function Home() {
             color="bg-gradient-to-br from-yellow-300 to-yellow-400"
             scores={topPlayers}
             emptyMessage="No businesses converted yet. Be the first to convince a business to accept Bitcoin! 🚀"
+            description="Players who have successfully convinced a local merchant to adopt bitcoin."
           />
 
           {/* Supporting Spenders */}
@@ -54,6 +55,7 @@ export default function Home() {
             color="bg-gradient-to-br from-green-300 to-green-400"
             scores={supportingSpenders}
             emptyMessage="No follow-up purchases yet. Support businesses that accept Bitcoin! 💰"
+            description="Players who supported a bitcoin merchant by making a follow-up purchase with bitcoin"
           />
 
           {/* Top Mappers */}
@@ -63,6 +65,7 @@ export default function Home() {
             color="bg-gradient-to-br from-blue-300 to-blue-400"
             scores={topMappers}
             emptyMessage="No businesses mapped yet. Add businesses to BTCMap.org! 📍"
+            description="Players who added a bitcoin merchant to BTCMap.org"
           />
 
           {/* Top Visitors */}
@@ -72,6 +75,7 @@ export default function Home() {
             color="bg-gradient-to-br from-purple-300 to-pink-400"
             scores={topVisitors}
             emptyMessage="No visits yet. Start visiting businesses to spread the word about Bitcoin! 🚶"
+            description="Players who visited a local merchant to discuss bitcoin"
           />
         </div>
 
