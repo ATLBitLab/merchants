@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { players } from "@/data/players";
 import { businesses } from "@/data/businesses";
@@ -24,7 +23,7 @@ export default function Home() {
         <header className="mb-8 text-center">
           <div className="mb-6 flex justify-center">
             <Link href="https://atlbitlab.com" target="_blank" rel="noopener noreferrer">
-              <Image
+              <img
                 src="/atl-bitlab.png"
                 alt="ATL BitLab"
                 width={200}
